@@ -1,0 +1,19 @@
+{
+    "manifest_version": 3,
+    "name": "Focus",
+    "description": "Focus on main content for certain websites",
+    "version": "0.1",
+    "background": {
+      "service_worker": "scripts/workers/background.js"
+    },
+    "content_scripts": [
+        { "matches": ["*://*/*"], "js": ["scripts/content/focusSo.js"]}
+    ],
+    "permissions": [
+        "tabs",
+        "scripting"
+    ],
+    "action": {
+        "default_icon": "focus.png"
+    }
+  }
